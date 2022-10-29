@@ -1,0 +1,15 @@
+#titulo
+{
+	text-align: center;
+}
+
+#principal
+{
+	border: 1px solid black;
+}
+
+.retorno
+{
+	background-color: #A0A0A0;
+	font-weight: bold;
+}

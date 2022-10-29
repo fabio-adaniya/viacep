@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<title>ViaCEP</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<h1 id="titulo">Consultar CEP</h1>
+	<br>
+	<br>
+	<div id="principal">
+		<input type="text" name="txtCep" id="campoCep">
+		<button onclick="consultar()">Consultar</button>
+		<br>
+		<br>
+		<label>Logradouro:</label>
+		<input type="text" name="txtLogradouro" id="campoLogradouro" readonly="true" class="retorno">
+		<br>
+		<br>
+		<label>Complemento:</label>
+		<input type="text" name="txtComplemento" id="campoComplemento" readonly="true" class="retorno">
+		<br>
+		<br>
+		<label>Bairro:</label>
+		<input type="text" name="txtBairro" id="campoBairro" readonly="true" class="retorno">
+		<br>
+		<br>
+		<label>Localidade:</label>
+		<input type="text" name="txtLocalidade" id="campoLocalidade" readonly="true" class="retorno">
+		<br>
+		<br>
+		<label>UF:</label>
+		<input type="text" name="txtUF" id="campoUF" readonly="true" class="retorno">
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
