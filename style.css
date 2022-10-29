@@ -1,15 +1,23 @@
+* 
+{ 
+	margin: 0;
+	padding: 0;
+}
+
 #titulo
 {
+	margin-top: 5%;
 	text-align: center;
 }
 
-#principal
+#consulta
 {
-	border: 1px solid black;
+	margin: auto;
+	width: 250px;
 }
 
-.retorno
+#retorno
 {
-	background-color: #A0A0A0;
-	font-weight: bold;
+	margin: auto;
+	width: 1000px;
 }

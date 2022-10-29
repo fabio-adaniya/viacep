@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-	<title>ViaCEP</title>
+	<title>Integração ViaCEP</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 <body>
 	<h1 id="titulo">Consultar CEP</h1>
 	<br>
 	<br>
 	<div id="principal">
-		<input type="text" name="txtCep" id="campoCep">
-		<button onclick="consultar()">Consultar</button>
+		<div class="input-group mb-3" id="consulta">
+			<input 
+				type="text" 
+				class="form-control" 
+				placeholder="Insira o cep aqui" 
+				maxlength="9"
+				autofocus
+				id="campoConsultaCep">
+			<button class="btn btn-primary" type="button" id="button-addon2" onclick="consultar()">Consultar</button>
+		</div>
+		  
 		<br>
-		<br>
-		<label>Logradouro:</label>
-		<input type="text" name="txtLogradouro" id="campoLogradouro" readonly="true" class="retorno">
-		<br>
-		<br>
-		<label>Complemento:</label>
-		<input type="text" name="txtComplemento" id="campoComplemento" readonly="true" class="retorno">
-		<br>
-		<br>
-		<label>Bairro:</label>
-		<input type="text" name="txtBairro" id="campoBairro" readonly="true" class="retorno">
-		<br>
-		<br>
-		<label>Localidade:</label>
-		<input type="text" name="txtLocalidade" id="campoLocalidade" readonly="true" class="retorno">
-		<br>
-		<br>
-		<label>UF:</label>
-		<input type="text" name="txtUF" id="campoUF" readonly="true" class="retorno">
+
+		<table id="retorno" class="table">
+			<tr>
+				<td>Logradouro:</td>
+				<td><input type="text" name="txtLogradouro" id="campoLogradouro" readonly="true" class="form-control" disabled></td>
+			</tr>
+			<tr>
+				<td>Complemento:</td>
+				<td><input type="text" name="txtComplemento" id="campoComplemento" readonly="true" class="form-control" disabled></td>
+			</tr>
+			<tr>
+				<td>Bairro:</td>
+				<td><input type="text" name="txtBairro" id="campoBairro" readonly="true" class="form-control" disabled></td></td>
+			</tr>
+			<tr>
+				<td>Localidade:</td>
+				<td><input type="text" name="txtLocalidade" id="campoLocalidade" readonly="true" class="form-control" disabled></td>
+			</tr>
+		</table>
 	</div>
 	<script type="text/javascript" src="script.js"></script>
 </body>
