@@ -1,9 +1,7 @@
 # ViaCEP
 
 Aplicação criada para consultar informações sobre um cep informado.<br>
-A consulta realiza o consumo da api viacep.
-
-Site da api: [viacep](https://viacep.com.br/).
+A consulta realiza o consumo da api [viacep](https://viacep.com.br/).
 
 Tecnologias utilizadas:
 
