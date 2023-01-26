@@ -4,20 +4,43 @@
 	padding: 0;
 }
 
-#titulo
-{
-	margin-top: 5%;
+body {
+	background: #EDEDED !important;
+}
+
+#principal {
+	background-color: #FFFFFF;
+	border-radius: 20px;
 	text-align: center;
+	width: 500px;
+	margin: 0 auto;
+	margin-top: 5%;
+	padding: 20px;
+}
+
+#titulo {
+	color: #007BFF;
 }
 
 #consulta
 {
-	margin: auto;
-	width: 250px;
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
 }
 
-#retorno
-{
-	margin: auto;
-	width: 1000px;
+#campoConsultaCep {
+	width: 150px;
+	margin-right: 10px;
+}
+
+#resultado {
+	border: 1px solid black;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.tituloResultado {
+	margin-top: 10px;
+	margin-bottom: 10px;
 }
