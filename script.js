@@ -1,9 +1,6 @@
-document.addEventListener("keypress", function(e) 
-{
-	if(e.key === 'Enter') 
-	{
+document.addEventListener("keypress", function(e) {
+	if(e.key === 'Enter')
 		consultar()
-	}
 });
 
 function consultar()
