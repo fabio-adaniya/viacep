@@ -1,6 +1,6 @@
 # ViaCEP
 
-Aplicação criada para consultar informações sobre um cep informado.<br>
+Aplicação criada para consultar informações sobre um CEP informado.<br>
 A consulta realiza o consumo da API [viacep](https://viacep.com.br/).
 
 Tecnologias utilizadas:
