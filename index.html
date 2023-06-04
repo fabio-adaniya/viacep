@@ -11,15 +11,13 @@
 	<div class="d-flex justify-content-center vh-100 align-items-center">
 		<div class="card m-3" style="width: 500px">
 			<div class="card-header text-center fw-bold">
-				Consultar CEP
+				Consulta de CEP
 			</div>
 			<div class="card-body">
-				<div class="d-flex gap-2 mb-3">
-					<input type="text" id="campoConsultaCep" class="form-control" placeholder="CEP" maxlength="9">
-					<button class="btn btn-primary d-flex gap-2" onclick="consultar()">
-						<i class="fa-solid fa-magnifying-glass mt-1"></i><span>Consultar</span>
-					</button>
-				</div>
+				<input type="text" id="campoConsultaCep" class="form-control mb-3 text-center" placeholder="CEP" maxlength="9" autofocus>
+				<button class="btn gap-2 w-100 text-light fw-bold" onclick="consultar()" style="background-color: #1E90FF;">
+					<i class="fa-solid fa-magnifying-glass mt-1"></i> Consultar
+				</button>
 				<hr>
 				<div class="mb-3">
 					<label class="form-label">Logradouro</label>
