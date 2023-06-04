@@ -1,10 +1,12 @@
 <h1 align="center">ViaCEP</h1>
 
-## Sobre
-Aplicação desenvolvida para consultar informações sobre um CEP informado.<br>
-A consulta realiza o consumo da API [viacep](https://viacep.com.br/).
+<h3 align="center">Sobre</h3>
+<div align="center">
+    Aplicação desenvolvida para consultar informações sobre um CEP informado.<br>
+    A consulta realiza o consumo da API [viacep](https://viacep.com.br/).
+</div>
 
-## Tecnologias utilizadas
+<h3 align="center">Tecnologias utilizadas</h3>
 
 <div display="inline" align="center">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
@@ -12,7 +14,17 @@ A consulta realiza o consumo da API [viacep](https://viacep.com.br/).
     <img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white">
 </div>
 
+<h3 align="center">Aplicação em funcionamento</h3>
+
+<div align="center">
+    <a href="https://viacep-fabio-adaniya.netlify.app/">
+        <strong>https://viacep-fabio-adaniya.netlify.app/</strong>
+    </a>
+</div>
+
 <br>
 
-<img src= "/img/tela.PNG">
+<div align="center">
+    <img src= "/img/tela.PNG">
+</div>
  
