@@ -3,7 +3,7 @@
 <h3 align="center">Sobre</h3>
 <div align="center">
     Aplicação desenvolvida para consultar informações sobre um CEP informado.<br>
-    A consulta realiza o consumo da API [viacep](https://viacep.com.br/).
+    A consulta realiza o consumo da API <a href="https://viacep.com.br/"><strong>ViaCEP</strong></a>
 </div>
 
 <h3 align="center">Tecnologias utilizadas</h3>
