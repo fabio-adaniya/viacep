@@ -17,8 +17,8 @@
 <h3 align="center">Aplicação em funcionamento</h3>
 
 <div align="center">
-    <a href="https://viacep-fabio-adaniya.netlify.app/">
-        <strong>https://viacep-fabio-adaniya.netlify.app/</strong>
+    <a href="https://fabio-adaniya.github.io/viacep/">
+        <strong>https://fabio-adaniya.github.io/viacep/</strong>
     </a>
 </div>
 
