@@ -9,30 +9,44 @@
 </head>
 <body class="bg-primary-subtle">
 	<div class="d-flex justify-content-center vh-100 align-items-center">
-		<div class="card m-3" style="width: 500px">
-			<div class="card-header text-center fw-bold">
-				Consulta de CEP
+		<div>
+			<div class="card m-3" style="width: 500px">
+				<div class="text-center fw-bold mt-3">
+					Consulta de CEP
+				</div>
+				<div class="card-body">
+					<input type="text" id="campoConsultaCep" class="form-control mb-3 text-center" placeholder="CEP" maxlength="9" autofocus>
+					<button class="btn btn-outline-primary gap-2 w-100 fw-bold" onclick="consultar()">
+						<i class="fa-solid fa-magnifying-glass mt-1"></i> Consultar
+					</button>
+					<hr>
+					<div class="mb-3">
+						<label class="form-label">Logradouro</label>
+						<input type="text" id="campoLogradouro" class="form-control" disabled/>
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Complemento</label>
+						<input type="text" id="campoComplemento" class="form-control" disabled/>
+					</div>
+					<div class="mb-3">
+						<label class="form-label">Bairro</label>
+						<input type="text" id="campoBairro" class="form-control" disabled/>
+					</div>
+					<label class="form-label">Localidade</label>
+					<input type="text" id="campoLocalidade" class="form-control" disabled/>
+				</div>
 			</div>
-			<div class="card-body">
-				<input type="text" id="campoConsultaCep" class="form-control mb-3 text-center" placeholder="CEP" maxlength="9" autofocus>
-				<button class="btn gap-2 w-100 text-light fw-bold" onclick="consultar()" style="background-color: #1E90FF;">
-					<i class="fa-solid fa-magnifying-glass mt-1"></i> Consultar
-				</button>
-				<hr>
-				<div class="mb-3">
-					<label class="form-label">Logradouro</label>
-					<input type="text" id="campoLogradouro" class="form-control" disabled/>
+			<div class="card m-3 bg-light">
+				<div class="card-body">
+					<div class="d-flex justify-content-center">
+						<a href="https://github.com/fabio-adaniya/viacep">
+							<div class="d-flex justify-content-center">
+								<img src="https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white">
+							</div>
+							<div class="fw-bold">https://github.com/fabio-adaniya/viacep</div>
+						</a>
+					</div>
 				</div>
-				<div class="mb-3">
-					<label class="form-label">Complemento</label>
-					<input type="text" id="campoComplemento" class="form-control" disabled/>
-				</div>
-				<div class="mb-3">
-					<label class="form-label">Bairro</label>
-					<input type="text" id="campoBairro" class="form-control" disabled/>
-				</div>
-				<label class="form-label">Localidade</label>
-				<input type="text" id="campoLocalidade" class="form-control" disabled/>
 			</div>
 		</div>
 	</div>
