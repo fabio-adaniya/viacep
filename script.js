@@ -13,21 +13,40 @@ function consultar()
 	cep = cep.replace("-", "");
 	cep = cep.trim();
 
-	if(cep.length == 8)
+	if($.isNumeric(cep))
 	{
-		$.ajax({
-			url: "https://viacep.com.br/ws/" + cep + "/json/",
-		}).done(function(response){
-			$("#campoLogradouro").val(response.logradouro);
-			$("#campoComplemento").val(response.complemento);
-			$("#campoBairro").val(response.bairro);
-			$("#campoLocalidade").val(response.localidade + ", " + response.uf);
+		if(cep.length == 8)
+			$.ajax({
+				url: "https://viacep.com.br/ws/" + cep + "/json/",
+			}).done(function(response){
+				$("#campoLogradouro").val(response.logradouro);
+				$("#campoComplemento").val(response.complemento);
+				$("#campoBairro").val(response.bairro);
+				$("#campoLocalidade").val(response.localidade + ", " + response.uf);
+
+				Swal.fire({
+					icon: 'success',
+					title: 'Consulta realizada com sucesso!',
+				});
+			});
+		else
+			Swal.fire({
+				icon: 'error',
+				title: 'O CEP informado é inválido!',
+			});
+	}
+	else if(cep.length == 0)
+	{
+		Swal.fire({
+			icon: 'warning',
+			title: 'Nenhum CEP foi informado!',
 		});
 	}
 	else
 	{
-		let erro = "O CEP informado é inválido";
-		console.log(erro);
-		alert(erro);
+		Swal.fire({
+			icon: 'error',
+			title: 'O CEP informado é inválido!',
+		});
 	}
 }
