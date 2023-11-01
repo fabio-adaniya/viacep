@@ -1,4 +1,4 @@
-$("#campoConsultaCep").keypress(function(event){
+$("#input-consultar").keypress(function(event){
 	if(event.which == 13)
 		consultar();
 });
@@ -9,7 +9,7 @@ $("#button-consultar").click(function(){
 
 function consultar()
 {
-	cep = $("#campoConsultaCep").val();
+	cep = $("#input-consultar").val();
 	cep = cep.replace("-", "");
 	cep = cep.trim();
 
@@ -19,10 +19,10 @@ function consultar()
 			$.ajax({
 				url: "https://viacep.com.br/ws/" + cep + "/json/",
 			}).done(function(response){
-				$("#campoLogradouro").val(response.logradouro);
-				$("#campoComplemento").val(response.complemento);
-				$("#campoBairro").val(response.bairro);
-				$("#campoLocalidade").val(response.localidade + ", " + response.uf);
+				$("#input-logradouro").val(response.logradouro);
+				$("#input-complemento").val(response.complemento);
+				$("#input-bairro").val(response.bairro);
+				$("#input-localidade").val(response.localidade + ", " + response.uf);
 
 				Swal.fire({
 					icon: 'success',
