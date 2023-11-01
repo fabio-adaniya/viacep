@@ -1,43 +1,33 @@
-document.addEventListener("keypress", function(e) {
-	if(e.key === 'Enter')
-		consultar()
+$("#campoConsultaCep").keypress(function(event){
+	if(event.which == 13)
+		consultar();
+});
+
+$("#button-consultar").click(function(){
+	consultar();
 });
 
 function consultar()
 {
-	let cep = document.getElementById("campoConsultaCep").value
+	cep = $("#campoConsultaCep").val();
+	cep = cep.replace("-", "");
+	cep = cep.trim();
 
-	if (validarCep())
+	if(cep.length == 8)
 	{
-		let busca = new XMLHttpRequest()
-		busca.open("GET", "https://viacep.com.br/ws/" + cep + "/json/", false)
-		busca.send()
-		console.log(busca.responseText)
-
-		let retorno = JSON.parse(busca.responseText)
-		document.getElementById("campoLogradouro").value = retorno.logradouro
-		document.getElementById("campoComplemento").value = retorno.complemento
-		document.getElementById("campoBairro").value = retorno.bairro
-		document.getElementById("campoLocalidade").value = retorno.localidade + ", " + retorno.uf
+		$.ajax({
+			url: "https://viacep.com.br/ws/" + cep + "/json/",
+		}).done(function(response){
+			$("#campoLogradouro").val(response.logradouro);
+			$("#campoComplemento").val(response.complemento);
+			$("#campoBairro").val(response.bairro);
+			$("#campoLocalidade").val(response.localidade + ", " + response.uf);
+		});
 	}
 	else
 	{
-		let erro = "O CEP informado é inválido"
-		console.log(erro)
-		alert(erro)
+		let erro = "O CEP informado é inválido";
+		console.log(erro);
+		alert(erro);
 	}
-}
-
-function validarCep()
-{
-	let resultado = true
-
-	let cep = document.getElementById("campoConsultaCep").value
-	cep = cep.replace("-", "")
-	cep = cep.trim()
-
-	if (cep.length != 8)
-		resultado = false
-
-	return resultado
 }
